@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Hunter - Fish Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-blue-900 font-['Poppins'] text-white">
+    <div class="start-screen min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/3761549/pexels-photo-3761549.jpeg')] bg-cover opacity-20"></div>
+        
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+                OCEAN HUNTER
+            </h1>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">
+                Swim through the ocean, eat smaller fish, and avoid the predators!
+            </p>
+            <button id="startBtn" class="start-btn px-8 py-4 text-2xl font-bold rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                START GAME <i class="ml-2 fas fa-play"></i>
+            </button>
+        </div>
+
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <div class="fish-animation">
+                <img src="https://images.pexels.com/photos/3716284/pexels-photo-3716284.jpeg" class="w-20 h-20 object-contain animate-swim">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('startBtn').addEventListener('click', () => {
+            window.location.href = 'game.html';
+        });
+    </script>
+</body>
+</html>
